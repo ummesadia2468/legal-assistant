@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Design tokens. Tailwind turns each --color-* into utilities
+   such as bg-desk, text-ink and border-rule. */
+@theme {
+  --color-desk: #e6eaf0;
+  --color-ink: #1b2a41;
+  --color-ink-soft: #4d5b70;
+  --color-rule: #c3ccd8;
+  --color-paper: #fffffe;
+  --color-seal: #7b2d3a;
+  --color-seal-dark: #62222d;
+  --color-alert: #a3262a;
+  --color-alert-bg: #fbeceb;
+  --color-note-bg: #eef2f7;
+
+  /* The document itself is set in a serif; the interface uses the system sans. */
+  --font-doc: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman",
+    serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-desk);
+  color: var(--color-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
